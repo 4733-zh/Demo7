@@ -57,9 +57,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    /**
-     * 初始化聊天消息
-     */
     private void initMsgs() {
         Msg msg1 = new Msg("Hello guy.", Msg.TYPE_RECEIVED);
         msgList.add(msg1);

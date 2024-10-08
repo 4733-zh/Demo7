@@ -39,27 +39,12 @@ public class MsgAdapter extends RecyclerView.Adapter<MsgAdapter.ViewHolder> {
         mMsgList = msgList;
     }
 
-    /**
-     * 创建 ViewHolder 加载 RecycleView 子项的布局
-     *
-     * @param parent
-     * @param viewType
-     * @return
-     */
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.msg_item, parent, false);
         return new ViewHolder(view);
     }
 
-    /**
-     * 为 RecycleView 子项赋值
-     * 赋值通过 position 判断子项位置
-     * 当子项进入界面时执行
-     *
-     * @param holder
-     * @param position
-     */
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         Msg msg = mMsgList.get(position);
